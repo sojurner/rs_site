@@ -8,7 +8,8 @@
     "test:update": "jest --silent -u",
     "format": "prettier --write \"src/**/*.{js,jsx,tsx}\"",
     "lint": "tslint --project .",
-    "dev": "parcel src/index.html"
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "repository": {
     "type": "git",
