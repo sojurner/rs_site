@@ -37,9 +37,9 @@
     "typescript": "^3.3.3333"
   },
   "dependencies": {
-    "@reach/router": "^1.1.1",
-    "petfinder-client": "^0.0.3",
+    "emotion": "^10.0.7",
     "react": "^16.4.2",
-    "react-dom": "^16.4.2"
+    "react-dom": "^16.4.2",
+    "react-emotion": "^10.0.0"
   }
 }
