@@ -1,0 +1,59 @@
+.nav-header {
+  transition: 1.2s ease-in;
+  opacity: 0.5;
+  filter: blur(2px);
+}
+
+.nav-header-show {
+  opacity: 1;
+  filter: blur(0);
+}
+
+.nav-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.nav-link {
+  border-radius: 0.5rem;
+  color: #1ff042;
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+  font-weight: 100;
+  padding: 0.2rem 0.5rem;
+  margin: 0 0.5rem;
+  transition: 0.3s linear;
+  list-style-type: none;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.nav-link a {
+  color: #1ff042;
+  text-shadow: #111 1px 1px 0, #000 1.1px 1.1px 5px;
+  text-decoration-line: none;
+}
+
+.nav-link::before {
+  content: '';
+  width: 120%;
+  height: 0%;
+  background-color: #1ff042;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  z-index: -1;
+  transition: all 0.7s ease;
+}
+
+.nav-link:hover::before {
+  height: 350%;
+}
+
+.nav-link:hover > a {
+  color: black;
+}
