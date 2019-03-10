@@ -1,0 +1,45 @@
+{
+  "name": "rs_personal",
+  "version": "1.0.0",
+  "description": "Rob Stringer Personal Website",
+  "main": "src/App.js",
+  "scripts": {
+    "test": "jest --silent",
+    "test:update": "jest --silent -u",
+    "format": "prettier --write \"src/**/*.{js,jsx,tsx}\"",
+    "lint": "tslint --project .",
+    "dev": "parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/btholt/complete-intro-to-react-v4.git"
+  },
+  "author": "Brian Holt <btholt@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/btholt/complete-intro-to-react-v4/issues"
+  },
+  "homepage": "https://github.com/btholt/complete-intro-to-react-v4#readme",
+  "devDependencies": {
+    "@babel/preset-react": "^7.0.0",
+    "@types/react": "^16.8.7",
+    "@types/react-dom": "^16.8.2",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "jest": "^23.5.0",
+    "parcel-bundler": "^1.12.0",
+    "react-test-renderer": "^16.8.4",
+    "tslint": "^5.13.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "@reach/router": "^1.1.1",
+    "petfinder-client": "^0.0.3",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  }
+}
