@@ -38,6 +38,8 @@
     "typescript": "^3.3.3333"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.7",
+    "@emotion/styled": "^10.0.7",
     "emotion": "^10.0.7",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",

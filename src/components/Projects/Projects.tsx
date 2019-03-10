@@ -1,4 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import styled from '@emotion/styled';
+
+const Container = styled('header')`
+  background-color: white;
+`;
 
 const Projects = () => {
   const [mounted, setMounted] = useState(false);
@@ -9,14 +14,8 @@ const Projects = () => {
   }, []);
 
   return (
-    <div
-      className={
-        mounted
-          ? 'projects-container-show projects-container'
-          : 'projects-container'
-      }
-    >
-      <h1>Projects</h1>
+    <Container>
+      ><h1>Projects</h1>
       <p>
         LOREM IPSUM GENERATOR Lorem ipsum dolor sit amet, consectetur adipiscing
         elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -26,7 +25,7 @@ const Projects = () => {
         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
         qui officia deserunt mollit anim id est laborum.
       </p>
-    </div>
+    </Container>
   );
 };
 

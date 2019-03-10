@@ -6,11 +6,11 @@ const LandingContent = () => {
   useEffect(() => {
     setTimeout(() => {
       setMounted(1);
-    }, 2500);
+    }, 4000);
 
     setTimeout(() => {
       setMounted(2);
-    }, 5000);
+    }, 9000);
   }, []);
 
   switch (mounted) {
@@ -20,16 +20,16 @@ const LandingContent = () => {
           <h1 className="landing-header">Rob Stringer</h1>
         </div>
       );
-    case 0:
-      return (
-        <div className="landing-main">
-          <h1 className="landing-header-initial-1">Hello</h1>
-        </div>
-      );
     case 1:
       return (
         <div className="landing-main">
           <h1 className="landing-header-initial-2">My name is...</h1>
+        </div>
+      );
+    default:
+      return (
+        <div className="landing-main">
+          <h1 className="landing-header-initial-1">Hello</h1>
         </div>
       );
   }
