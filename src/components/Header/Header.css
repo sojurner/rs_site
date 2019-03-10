@@ -1,10 +1,13 @@
 .nav-header {
   transition: 1.2s ease-in;
-  opacity: 0.5;
+  opacity: 0;
+  z-index: 0;
+  display: none;
   filter: blur(2px);
 }
 
 .nav-header-show {
+  display: static;
   opacity: 1;
   filter: blur(0);
 }

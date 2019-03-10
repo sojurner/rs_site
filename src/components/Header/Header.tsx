@@ -11,7 +11,7 @@ const Header = ({ navLinks }) => {
   useEffect(() => {
     setTimeout(() => {
       setMounted(true);
-    }, 100);
+    }, 14000);
   }, []);
   return (
     <nav className={mounted ? 'nav-header-show nav-header' : 'nav-header'}>

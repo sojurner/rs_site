@@ -1,0 +1,11 @@
+.skills-container-show,
+.skills-container {
+  opacity: 0;
+  line-height: 2rem;
+  transition: 0.4s ease-in-out;
+  padding: 2rem 4rem;
+}
+
+.skills-container-show {
+  opacity: 1;
+}
