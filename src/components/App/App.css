@@ -1,0 +1,11 @@
+.blurred-container,
+.container {
+  height: 100vh;
+  width: 100vw;
+  filter: blur(0);
+  transition: 0.5s linear;
+}
+
+.blurred-container {
+  filter: blur(13px);
+}

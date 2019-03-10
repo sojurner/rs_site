@@ -4,27 +4,47 @@ import './Header.css';
 
 interface IHeaderProps {
   navLinks: { name: string; link: string }[];
+  toggleBlurred: Function;
 }
 
-const Header = ({ navLinks }) => {
+const Header = ({ navLinks, toggleBlurred }) => {
   let [mounted, setMounted] = useState(false);
+  let [menuDisplay, toggleMenuDisplay] = useState(false);
   useEffect(() => {
     setTimeout(() => {
       setMounted(true);
-    }, 14000);
+    }, 11500);
   }, []);
+
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    toggleMenuDisplay(!menuDisplay);
+    toggleBlurred();
+  };
+
   return (
-    <nav className={mounted ? 'nav-header-show nav-header' : 'nav-header'}>
-      {navLinks.map(navItem => {
-        return (
-          <li className="nav-link">
-            <NavLink exact to={`/${navItem.link}`}>
-              {navItem.name}
-            </NavLink>
-          </li>
-        );
-      })}
-    </nav>
+    <>
+      <button
+        className={mounted ? 'hamburger' : 'hamburger hamburger-hide'}
+        onClick={handleClick}
+      >
+        <i
+          className={menuDisplay ? 'fas fa-skull-crossbones' : 'fas fa-stream'}
+        />
+      </button>
+      <nav
+        className={menuDisplay ? 'nav-header-show nav-header' : 'nav-header'}
+      >
+        {navLinks.map(navItem => {
+          return (
+            <li className="nav-link">
+              <NavLink onClick={handleClick} exact to={`/${navItem.link}`}>
+                {navItem.name}
+              </NavLink>
+            </li>
+          );
+        })}
+      </nav>
+    </>
   );
 };
 

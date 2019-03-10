@@ -11,11 +11,11 @@ const LandingContent = () => {
 
     setTimeout(() => {
       setMounted(2);
-    }, 9000);
+    }, 8000);
 
     setTimeout(() => {
       setDisplay(true);
-    }, 13000);
+    }, 11000);
   }, []);
 
   const typedHeader = () => {

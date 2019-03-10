@@ -1,32 +1,79 @@
 .nav-header {
-  transition: 1.2s ease-in;
+  transition: 0.3s ease-in;
   opacity: 0;
   z-index: 0;
   display: none;
-  filter: blur(2px);
 }
 
 .nav-header-show {
   display: static;
   opacity: 1;
+  z-index: 10;
+}
+
+.hamburger {
+  cursor: pointer;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  opacity: 1;
   filter: blur(0);
+  transition: 0.8s ease-in;
+  color: #1ff042;
+  background: none;
+  padding: 0.5rem 0.7rem;
+  position: absolute;
+  z-index: 20;
+  right: 0;
+  top: 0;
+  border-color: #1ff042;
+}
+
+.hamburger-hide {
+  opacity: 0;
+  filter: blur(2px);
+  color: #1ff042;
+  background: none;
+  padding: 0.5rem 0.7rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+  border-color: #1ff042;
+}
+
+.hamburger:focus {
+  outline: 0;
+}
+
+.hamburger:hover {
+  background-color: #1ff042;
+  transition: 0;
+  color: black;
+}
+
+.fa-stream,
+.fa-skull-crossbones {
+  font-size: 1.4rem;
 }
 
 .nav-header {
+  position: absolute;
+  left: 0;
+  right: 0;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
   padding: 1rem;
 }
 
 .nav-link {
-  border-radius: 0.5rem;
   color: #1ff042;
-  font-size: 1.5rem;
+  font-size: 2rem;
   letter-spacing: 1.5px;
   font-weight: 100;
   padding: 0.2rem 0.5rem;
-  margin: 0 0.5rem;
+  margin: 0.7rem;
   transition: 0.3s linear;
   list-style-type: none;
   overflow: hidden;
@@ -38,6 +85,7 @@
   color: #1ff042;
   text-shadow: #111 1px 1px 0, #000 1.1px 1.1px 5px;
   text-decoration-line: none;
+  z-index: -1;
 }
 
 .nav-link::before {
