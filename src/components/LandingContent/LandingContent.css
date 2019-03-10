@@ -20,7 +20,7 @@
   margin: 0 auto;
   letter-spacing: 2px;
   padding-right: 0.5rem;
-  animation: typing 2.5s steps(20, end), blink-caret 0.9s step-end infinite;
+  animation: typing 1.8s steps(20, end), blink-caret 0.9s step-end infinite;
 }
 
 .landing-header-initial-1 {
@@ -28,7 +28,7 @@
 }
 
 .landing-header-initial-2 {
-  animation: typing-2 2.5s steps(20, end), blink-caret 0.9s step-end infinite;
+  animation: typing-2 2.3s steps(20, end), blink-caret 0.9s step-end infinite;
 }
 
 .job-title,
@@ -53,7 +53,7 @@
     width: 0;
   }
   to {
-    width: 24rem;
+    width: 25rem;
   }
 }
 
