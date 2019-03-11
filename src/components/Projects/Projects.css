@@ -1,6 +1,5 @@
 .projects-container {
   line-height: 2rem;
-  transition: 0.4s ease-in-out;
   padding: 2rem 4rem;
-  opacity: 1;
+  animation: fadeIn 0.4s linear;
 }

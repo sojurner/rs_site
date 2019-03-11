@@ -16,3 +16,79 @@ body {
   font-family: 'matrix';
   src: url('./assets/fonts/LCD_Solid.ttf');
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 25rem;
+  }
+}
+
+@keyframes typing-1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 11rem;
+  }
+}
+
+@keyframes typing-2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 27rem;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(43, 255, 0);
+  }
+}
+
+@keyframes blurize {
+  from {
+    filter: blur(2px);
+  }
+  to {
+    filter: blur(0);
+  }
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(1.3, 1.3, 1.3);
+  }
+
+  50% {
+    transform: scale3d(1, 1, 1);
+  }
+}

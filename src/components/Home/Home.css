@@ -1,0 +1,6 @@
+.home-container {
+  line-height: 2rem;
+  padding: 2rem 4rem;
+  animation-delay: 1s;
+  animation: fadeIn 0.4s;
+}
