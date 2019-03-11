@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import Navigation from '../Navigation/Navigation';
+import Hamburger from '../Hamburger/Hamburger';
 import './Header.css';
 
 interface IHeaderProps {
@@ -16,34 +17,23 @@ const Header = ({ navLinks, toggleBlurred }) => {
     }, 11500);
   }, []);
 
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+  const toggleMenu = (event: React.MouseEvent<HTMLElement>) => {
     toggleMenuDisplay(!menuDisplay);
     toggleBlurred();
   };
 
   return (
     <>
-      <button
-        className={mounted ? 'hamburger' : 'hamburger hamburger-hide'}
-        onClick={handleClick}
-      >
-        <i
-          className={menuDisplay ? 'fas fa-skull-crossbones' : 'fas fa-stream'}
-        />
-      </button>
-      <nav
-        className={menuDisplay ? 'nav-header-show nav-header' : 'nav-header'}
-      >
-        {navLinks.map(navItem => {
-          return (
-            <li className="nav-link">
-              <NavLink onClick={handleClick} exact to={`/${navItem.link}`}>
-                {navItem.name}
-              </NavLink>
-            </li>
-          );
-        })}
-      </nav>
+      <Hamburger
+        mounted={mounted}
+        toggleMenu={toggleMenu}
+        menuDisplay={menuDisplay}
+      />
+      <Navigation
+        menuDisplay={menuDisplay}
+        navLinks={navLinks}
+        toggleMenu={toggleMenu}
+      />
     </>
   );
 };
