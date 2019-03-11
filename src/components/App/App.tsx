@@ -9,9 +9,18 @@ import Header from '../Header/Header';
 import './App.css';
 
 const routeLinks = [
-  { name: 'About', link: 'about' },
-  { name: 'Skills', link: 'skills' },
-  { name: 'Projects', link: 'projects' }
+  { name: 'Home', link: '', route_load: () => import('../Home/Home') },
+  { name: 'About', link: 'about', route_load: () => import('../About/About') },
+  {
+    name: 'Skills',
+    link: 'skills',
+    route_load: () => import('../Skills/Skills')
+  },
+  {
+    name: 'Projects',
+    link: 'projects',
+    route_load: () => import('../Projects/Projects')
+  }
 ];
 
 const App = () => {
