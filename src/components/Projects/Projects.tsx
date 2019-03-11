@@ -1,25 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import Loading from '../Loading/Loading';
+import React from 'react';
 import './Projects.css';
 
 const Projects = () => {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    setTimeout(() => {
-      setMounted(true);
-    }, 500);
-  }, []);
-
   return (
     <>
-      {!mounted && <Loading />}
-      <div
-        className={
-          mounted
-            ? 'projects-container-show projects-container'
-            : 'projects-container'
-        }
-      >
+      <div className="projects-container">
         ><h1>Projects</h1>
         <p>
           LOREM IPSUM GENERATOR Lorem ipsum dolor sit amet, consectetur
