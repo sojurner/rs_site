@@ -1,11 +1,5 @@
-.about-container-show,
 .about-container {
-  opacity: 0;
   line-height: 2rem;
   transition: 0.4s ease-in-out;
   padding: 2rem 4rem;
-}
-
-.about-container-show {
-  opacity: 1;
 }
