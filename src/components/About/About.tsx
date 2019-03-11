@@ -1,21 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import Loading from '../Loading/Loading';
+import React from 'react';
 import './About.css';
+
 const About = () => {
-  let [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    setTimeout(() => {
-      setMounted(true);
-    }, 1000);
-  });
   return (
     <>
-      {!mounted && <Loading />}
-      <div
-        className={
-          mounted ? 'about-container-show about-container' : 'about-container'
-        }
-      >
+      <div className="about-container">
         <h1>About Me</h1>
         <p>
           LOREM IPSUM GENERATOR Lorem ipsum dolor sit amet, consectetur
