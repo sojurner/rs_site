@@ -1,25 +1,20 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import Skills from '../Skills/Skills';
-import Projects from '../Projects/Projects';
-import About from '../About/About';
+import DynamicImports from '../DynamicImports/DynamicImports';
 
 interface IRoutesProps {
   routes: { name: string; link: string }[];
 }
 
 const Routes = ({ routes }) => {
-  const components = [About, Skills, Projects];
-  const component_paths = routes.map((route, index) => {
-    const { name, link, component } = route;
-    return (
-      <Route
-        key={`route-${index}`}
-        path={`/${link}`}
-        component={components[index]}
-      />
-    );
-  });
+  const component_paths = routes.map((route, index) => (
+    <Route
+      key={`route-${index}`}
+      exact
+      path={`/${route.link}`}
+      render={() => <DynamicImports load={route.route_load} />}
+    />
+  ));
   return <>{component_paths}</>;
 };
 
