@@ -1,20 +1,7 @@
 .nav-header {
   transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
-  z-index: 0;
-  display: none;
-  perspective: 0;
-  display: absolute;
-  opacity: 0;
-}
-
-.nav-header-show {
-  opacity: 1;
-  z-index: 10;
-  animation: zoomIn 1s linear;
-}
-
-.nav-header {
   position: absolute;
+  opacity: 0;
   top: 0;
   bottom: 0;
   left: 0;
@@ -24,6 +11,12 @@
   align-items: center;
   justify-content: center;
   padding: 1rem;
+}
+
+.nav-header-show {
+  opacity: 1;
+  z-index: 10;
+  animation: zoomIn 1s linear;
 }
 
 .nav-link {
@@ -40,6 +33,12 @@
   transition: all 0.5s ease;
 }
 
+.nav-link i {
+  margin-right: 1rem;
+  font-size: 1.4rem;
+  transition: 0.3s linear;
+}
+
 .nav-link a {
   color: #1ff042;
   text-shadow: #111 1px 1px 0, #000 1.1px 1.1px 5px;
@@ -51,7 +50,7 @@
   content: '';
   width: 120%;
   height: 0%;
-  background-color: #1ff042;
+  background-color: #0ea527;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -61,7 +60,11 @@
 }
 
 .nav-link:hover::before {
-  height: 350%;
+  height: 415%;
+}
+
+.nav-link:hover i {
+  color: black;
 }
 
 .nav-link:hover > a {
