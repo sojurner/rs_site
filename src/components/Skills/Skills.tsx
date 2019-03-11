@@ -1,24 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import Loading from '../Loading/Loading';
+import React from 'react';
 import './Skills.css';
-const Skills = () => {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    setTimeout(() => {
-      setMounted(true);
-    }, 1000);
-  }, []);
 
+const Skills = () => {
   return (
     <>
-      {!mounted && <Loading />}
-      <div
-        className={
-          mounted
-            ? 'skills-container-show skills-container'
-            : 'skills-container'
-        }
-      >
+      <div className="skills-container">
         <h1>Skills</h1>
         <p>
           LOREM IPSUM GENERATOR Lorem ipsum dolor sit amet, consectetur
