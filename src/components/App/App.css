@@ -4,6 +4,7 @@
   width: 100vw;
   filter: blur(0);
   transition: 0.4s linear;
+  position: relative;
 }
 
 .blurred-container {

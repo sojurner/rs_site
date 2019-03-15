@@ -1,0 +1,50 @@
+.contact-icons {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  justify-content: space-around;
+  max-width: 16rem;
+  animation: curtains 1.5s linear;
+  width: 16rem;
+  margin: auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+}
+
+.contact-icons {
+  visibility: hidden;
+}
+
+.contact-icons > * {
+  visibility: visible;
+}
+
+.contact-icons > * {
+  transition: linear 100ms, transform 300ms ease-in-out 200ms;
+}
+.contact-icons:hover > * {
+  filter: blur(2px);
+  transform: scale(1);
+}
+
+.contact-icons > *:hover {
+  filter: blur(0);
+  transform: scale(1.1);
+  transition-delay: 0ms, 0ms;
+}
+
+.contact-item {
+  cursor: pointer;
+  color: background-green;
+}
+
+@keyframes curtains {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 16rem;
+  }
+}

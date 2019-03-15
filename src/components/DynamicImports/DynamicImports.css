@@ -1,0 +1,30 @@
+.pills {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -190px 0 0 -155px;
+  object-fit: cover;
+  object-position: 0 -20%;
+  opacity: 0.7;
+  width: 310px;
+  height: 250px;
+  animation: float-morph 6s ease-in-out infinite;
+
+  text-align: center;
+}
+
+@keyframes float-morph {
+  0% {
+    filter: brightness(0.6);
+
+    transform: translatey(0px);
+  }
+  50% {
+    filter: brightness(0.1);
+    transform: translatey(-10px);
+  }
+  100% {
+    filter: brightness(0.6);
+    transform: translatey(0px);
+  }
+}
