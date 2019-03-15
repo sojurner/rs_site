@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import LandingContent from '../LandingContent/LandingContent';
+import Contact from '../Contact/Contact';
 import Routes from '../Routes/Routes';
 import Header from '../Header/Header';
+import { InitialLoadProvider } from '../context';
 
 import './App.css';
 
@@ -25,6 +27,12 @@ const routeLinks = [
 
 const App = () => {
   let [blurredBackground, setBlurred] = useState(false);
+  let [initialLoad, setInitialLoad] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setInitialLoad(true);
+    }, 13000);
+  }, []);
   const toggleBackground = () => {
     setBlurred(!blurredBackground);
   };
@@ -37,10 +45,11 @@ const App = () => {
             blurredBackground ? 'blurred-container container' : 'container'
           }
         >
-          <>
-            <LandingContent />
+          <LandingContent />
+          <InitialLoadProvider value={initialLoad}>
             <Routes routes={routeLinks} />
-          </>
+            <Contact />
+          </InitialLoadProvider>
         </div>
       </>
     </Router>

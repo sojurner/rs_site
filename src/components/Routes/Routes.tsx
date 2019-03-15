@@ -12,7 +12,9 @@ const Routes = ({ routes }) => {
       key={`route-${index}`}
       exact
       path={`/${route.link}`}
-      render={() => <DynamicImports load={route.route_load} />}
+      render={() => (
+        <DynamicImports page={route.name} load={route.route_load} />
+      )}
     />
   ));
   return <>{component_paths}</>;
