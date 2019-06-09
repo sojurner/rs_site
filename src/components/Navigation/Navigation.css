@@ -11,6 +11,9 @@
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  height: max-content;
+  margin: auto;
+  width: max-content;
 }
 
 .nav-header-show {

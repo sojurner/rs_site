@@ -32,9 +32,9 @@ const Header: React.FunctionComponent<IHeaderProps> = ({
         />
       </header>
       <Navigation
+        toggleMenu={toggleMenu}
         menuDisplay={menuDisplay}
         navLinks={navLinks}
-        toggleMenu={toggleMenu}
       />
     </>
   );

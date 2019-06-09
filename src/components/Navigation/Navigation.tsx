@@ -5,6 +5,7 @@ import './Navigation.css';
 interface iNavigationProps {
   menuDisplay: boolean;
   navLinks: Array<{ name: string; link: string }>;
+  toggleMenu: Function;
 }
 const icons = [
   'fas fa-house-damage',
@@ -15,13 +16,16 @@ const icons = [
 
 const Navigation = ({ menuDisplay, navLinks, toggleMenu }) => (
   <>
-    <div className={menuDisplay ? 'nav-bg-show nav-bg' : 'nav-bg'} />
+    <div
+      onClick={toggleMenu}
+      className={menuDisplay ? 'nav-bg-show nav-bg' : 'nav-bg'}
+    />
     <nav className={menuDisplay ? 'nav-header-show nav-header' : 'nav-header'}>
       {navLinks.map((navItem, index) => {
         return (
           <li className="nav-link" key={`nav-links-${index}`}>
             <i className={icons[index]} />
-            <NavLink onClick={toggleMenu} exact to={`/${navItem.link}`}>
+            <NavLink onClick={toggleMenu} exact={true} to={`/${navItem.link}`}>
               {navItem.name}
             </NavLink>
           </li>
