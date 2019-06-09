@@ -54,7 +54,11 @@ const Home = ({ history }) => {
           key={`gallery-${index}`}
           onMouseEnter={handleHover.bind(null, index)}
           onMouseLeave={handleHover.bind(null, NaN)}
-          onClick={redirect.bind(null, pic.hint)}
+          onClick={
+            pic.hint === 'Contact'
+              ? () => {}
+              : redirect.bind(null, pic.hint.toLowerCase())
+          }
           {...pic}
         >
           {hovered === index && <h1 className="home-hint">{pic.hint}</h1>}

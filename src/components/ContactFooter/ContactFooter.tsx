@@ -22,9 +22,8 @@ const svgIcons = [
 
 const ContactFooter = () => {
   // const redirect = (null: null, url: string) => {}
-  const openLink = (event, url) => {
+  const openLink = url => {
     window.open(url, '_blank');
-    event.stopPropagation();
   };
 
   return (
@@ -32,7 +31,7 @@ const ContactFooter = () => {
       {svgIcons.map((icon, index) => (
         <div
           key={`svg-${index}`}
-          onClick={openLink.bind(event, icon.link)}
+          onClick={openLink.bind(null, icon.link)}
           className="svg-container"
         >
           <img
