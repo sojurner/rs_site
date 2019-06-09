@@ -3,19 +3,19 @@ import './ContactFooter.css';
 
 const svgIcons = [
   {
-    file: require('../../assets/images/github.svg'),
+    name: 'github',
     link: 'https://github.com/Mycobee'
   },
   {
-    file: require('../../assets/images/linkedin.svg'),
+    name: 'linkedin',
     link: 'https://github.com/Mycobee'
   },
   {
-    file: require('../../assets/images/email.svg'),
+    name: 'phone',
     link: 'https://github.com/Mycobee'
   },
   {
-    file: require('../../assets/images/phone.svg'),
+    name: 'email',
     link: 'https://github.com/Mycobee'
   }
 ];
@@ -23,7 +23,6 @@ const svgIcons = [
 const ContactFooter = () => {
   // const redirect = (null: null, url: string) => {}
   const openLink = url => {
-    console.log(url);
     window.open(url, '_blank');
   };
 
@@ -38,7 +37,9 @@ const ContactFooter = () => {
           <img
             key={`svg-${index}`}
             className="contact-icon"
-            src={icon.file}
+            src={`https://res.cloudinary.com/paulkim/image/upload/v1552415216/images/icons/${
+              icon.name
+            }.svg`}
             alt="icons"
           />
         </div>
