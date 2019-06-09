@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom';
 import './Navigation.css';
 
 interface iNavigationProps {
-  menuDisplay: Boolean;
-  navLinks: { name: string; link: string }[];
+  menuDisplay: boolean;
+  navLinks: Array<{ name: string; link: string }>;
 }
 const icons = [
   'fas fa-house-damage',
@@ -14,18 +14,21 @@ const icons = [
 ];
 
 const Navigation = ({ menuDisplay, navLinks, toggleMenu }) => (
-  <nav className={menuDisplay ? 'nav-header-show nav-header' : 'nav-header'}>
-    {navLinks.map((navItem, index) => {
-      return (
-        <li className="nav-link" key={`nav-links-${index}`}>
-          <i className={icons[index]} />
-          <NavLink onClick={toggleMenu} exact to={`/${navItem.link}`}>
-            {navItem.name}
-          </NavLink>
-        </li>
-      );
-    })}
-  </nav>
+  <>
+    <div className={menuDisplay ? 'nav-bg-show nav-bg' : 'nav-bg'} />
+    <nav className={menuDisplay ? 'nav-header-show nav-header' : 'nav-header'}>
+      {navLinks.map((navItem, index) => {
+        return (
+          <li className="nav-link" key={`nav-links-${index}`}>
+            <i className={icons[index]} />
+            <NavLink onClick={toggleMenu} exact to={`/${navItem.link}`}>
+              {navItem.name}
+            </NavLink>
+          </li>
+        );
+      })}
+    </nav>
+  </>
 );
 
 export default Navigation;

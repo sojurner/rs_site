@@ -23,14 +23,14 @@
   "homepage": "https://github.com/btholt/complete-intro-to-react-v4#readme",
   "devDependencies": {
     "@babel/preset-react": "^7.0.0",
+    "@types/node": "^12.0.7",
     "@types/react": "^16.8.7",
     "@types/react-dom": "^16.8.2",
     "babel-core": "^6.26.3",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "jest": "^23.5.0",
-    "parcel-bundler": "^1.12.0",
+    "parcel-bundler": "^1.12.3",
     "react-test-renderer": "^16.8.4",
     "tslint": "^5.13.1",
     "tslint-config-prettier": "^1.18.0",
@@ -38,12 +38,8 @@
     "typescript": "^3.3.3333"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.7",
-    "@emotion/styled": "^10.0.7",
-    "emotion": "^10.0.7",
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0",
-    "react-emotion": "^10.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-loadable": "^5.5.0",
     "react-router-dom": "^4.3.1"
   }

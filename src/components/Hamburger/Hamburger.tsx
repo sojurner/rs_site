@@ -3,7 +3,7 @@ import './Hamburger.css';
 
 const Hamburger = ({ mounted, toggleMenu, menuDisplay }) => (
   <button
-    className={mounted ? 'hamburger' : 'hamburger hamburger-hide'}
+    className={mounted === 3 ? 'hamburger' : 'hamburger hamburger-hide'}
     onClick={toggleMenu}
   >
     <i className={menuDisplay ? 'fas fa-skull-crossbones' : 'fas fa-stream'} />
