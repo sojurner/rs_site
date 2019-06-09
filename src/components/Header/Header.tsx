@@ -1,22 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Navigation from '../Navigation/Navigation';
 import Hamburger from '../Hamburger/Hamburger';
+import LandingContent from '../LandingContent/LandingContent';
 import './Header.css';
 
 interface IHeaderProps {
-  navLinks: { name: string; link: string }[];
+  navLinks: Array<{ name: string; link: string }>;
   toggleBlurred: Function;
+  mounted: number;
 }
 
-const Header = ({ navLinks, toggleBlurred }) => {
-  let [mounted, setMounted] = useState(false);
-  let [menuDisplay, toggleMenuDisplay] = useState(false);
-  useEffect(() => {
-    setTimeout(() => {
-      setMounted(true);
-    }, 11500);
-  }, []);
-
+const Header: React.FunctionComponent<IHeaderProps> = ({
+  navLinks,
+  toggleBlurred,
+  mounted
+}) => {
+  const [menuDisplay, toggleMenuDisplay] = useState(false);
   const toggleMenu = (event: React.MouseEvent<HTMLElement>) => {
     toggleMenuDisplay(!menuDisplay);
     toggleBlurred();
@@ -24,11 +23,14 @@ const Header = ({ navLinks, toggleBlurred }) => {
 
   return (
     <>
-      <Hamburger
-        mounted={mounted}
-        toggleMenu={toggleMenu}
-        menuDisplay={menuDisplay}
-      />
+      <header>
+        <LandingContent mounted={mounted} />
+        <Hamburger
+          mounted={mounted}
+          toggleMenu={toggleMenu}
+          menuDisplay={menuDisplay}
+        />
+      </header>
       <Navigation
         menuDisplay={menuDisplay}
         navLinks={navLinks}

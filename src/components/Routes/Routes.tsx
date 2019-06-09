@@ -1,21 +1,21 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import DynamicImports from '../DynamicImports/DynamicImports';
+import Loading from '../Loading/Loading';
 
 interface IRoutesProps {
   routes: { name: string; link: string }[];
 }
 
 const Routes = ({ routes }) => {
-  const component_paths = routes.map((route, index) => (
+  const Components = routes.map((route, index) => (
     <Route
       key={`route-${index}`}
-      exact
+      exact={true}
       path={`/${route.link}`}
-      render={() => <DynamicImports load={route.route_load} />}
+      component={route.Component}
     />
   ));
-  return <>{component_paths}</>;
+  return <React.Suspense fallback={Loading}>{Components}</React.Suspense>;
 };
 
 export default Routes;

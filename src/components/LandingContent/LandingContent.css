@@ -1,17 +1,15 @@
 .landing-main,
 .landing-main-show {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .landing-header,
 .landing-header-initial-1,
 .landing-header-initial-2 {
   font-size: 4rem;
-  /* font-family: 'Poiret One', cursive; */
+  height: 4rem;
   text-align: center;
-  height: max-content;
   font-weight: 100;
   color: #17bf33;
   overflow: hidden;
